@@ -9,6 +9,7 @@ class Tsocks < Formula
   def install
     system "autoconf", "-v"
     system "./configure", "--disable-debug",
+                          "--host",
                           "--prefix=#{prefix}",
                           "--with-conf=#{etc}/tsocks.conf"
 
